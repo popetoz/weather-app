@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather2u</title>
+    {{! Font awesome  }}
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="icon" href="/images/logo.png" />
+  </head>
+  <body>
+
+    {{>header}}
+    <main>
+      <div class="layer"></div>
+      <div class="container">
+        <div class="help">
+          <h3>Documentation</h3>
+          <p>All you have to do is to search for a country, town, area or any place in the world and hit search to get the weather</p>
+          <p>Also you can click on the location icon and get the weather for your current location</p>        
+        </div>
+      </div>
+    </main>
+    {{>footer}} 
+
+    <script>
+     const $links = document.querySelectorAll('header .container .links li')
+     $links[2].classList.add("active")
+    </script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

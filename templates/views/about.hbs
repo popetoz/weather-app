@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather2u</title>
+    {{! Font awesome  }}
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="icon" href="/images/logo.png" />
+  </head>
+  <body>
+    {{>header}}
+    <main>
+      <div class="layer"></div>
+      <div class="about">
+        <div class="about-info">
+          <h3>{{title}}</h3>  
+          <p>Created by {{name}}</p>
+        </div>
+        <img src="/images/pic.bmp" alt="my-image" class="my-img"/>
+        <p>Download my CV </p>
+        <a href="/cv/cv.pdf" download="true"><i class="fas fa-download fa-2x cv"></i></a>
+      </div>
+    </main>
+    {{>footer}}   
+
+    <script>
+     const $links = document.querySelectorAll('header .container .links li')
+     $links[1].classList.add("active")
+    </script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

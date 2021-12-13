@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather2u</title>
+    {{! Font awesome  }}
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="icon" href="/images/logo.png" />
+  </head>
+  <body>
+    <div class="forecast hide" id="forecast">
+      <div class="content">
+          <p id="forecastText" >
+            forecast test
+          </p>
+           <img id="forecastMap" alt="map" src="" />
+          <i class="fas fa-close close" id="close"></i>
+      </div>
+    </div>
+    {{>header}}
+    <main>
+      <div class="layer"></div>
+      <div class="container">
+        <div class="info">
+          <i class="fas fa-cloud"></i>
+          <h2 class="msg"> Use this site to get the weather</h2>
+        </div>
+        <form id="form">
+          <div class="search">
+            <input type="text" name="address" id="location" placeholder="Type an address......" />
+            <i class="fas fa-map-marker-alt fa-2x location" id="locationIcon"></i>
+            <button type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+        
+      </div>
+    </main>
+    {{>footer}}
+    <script>
+      const $links = document.querySelectorAll('header .container .links li')
+      $links[0].classList.add("active")
+    </script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
